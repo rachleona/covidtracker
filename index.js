@@ -33,7 +33,7 @@ function createMarker(countryData) {
 
     
     let icon = {
-        url: iso2 != null ? "./images/" + iso2 + "_64.png" : "./images/red_fade.png"
+        url: iso2 != null ? "https://www.countryflags.io/" + iso2.toLowerCase() + "/shiny/64.png" : "./red_fade.png"
     }
 
     if(iso2 == null){ icon.scaledSize = new google.maps.Size(40, 40)}
@@ -72,7 +72,7 @@ function createListItem(countryData) {
                     <div class="item-top">
                         <span>${country}</span>
                         <div class="img-container">
-                            ${countryInfo.iso2 != null ? '<img src="images/' + countryInfo.iso2 + '_48.png"/>' : "<div class='dummy-circle'>?</div>"}
+                            ${countryInfo.iso2 != null ? '<img src="https://www.countryflags.io/' + countryInfo.iso2.toLowerCase + '/flat/48.png"/>' : "<div class='dummy-circle'>?</div>"}
                         </div>
                     </div>
                     <div class="item-details">
