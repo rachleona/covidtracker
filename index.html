@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 TRACKER</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+    <script   src="https://code.jquery.com/jquery-3.5.0.min.js"   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="   crossorigin="anonymous"></script>
+    <script src="map.js"></script>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script>
+        $(document).ready(function(){
+            getData()
+        })
+    </script>
+</head>
+<body>
+    <div class="nav raleway">
+        <span>COVID-19 TRACKER</span>
+    </div>
+    <div id="map">
+
+    </div>
+    <div id="sidebar">
+        <div style="display:flex">
+            <div id="search-container">
+                <input type="text" id="search" placeholder="Search territory" oninput="getData(0)"/>
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <div id="list-container">
+            
+        </div>
+    </div>
+    <div id="global-box">
+        
+    </div>
+    <div id="handle">
+        <i class="fa fa-chevron-right" onclick="openSide()"></i>
+    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBslw-t-ZYelKli1nofp7b8KzhAwft86MA&callback=initMap">
+    </script>
+</body>
+</html>
